@@ -1,0 +1,445 @@
+/* ========================================================== 
+                            Resets
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ========================================================== 
+                            Fonts
+========================================================== */
+
+@font-face {
+    font-family: 'Roboto-Rg';
+    src: url('./../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bd';
+    src: url('./../fonts/Roboto-Bold.ttf');
+}
+
+/* ========================================================== 
+                Variables / Custom Properties
+========================================================== */
+
+:root {
+    --accent:  rgb(255, 53, 113);
+    --numbers: rgb(221, 221, 221);
+    --header-hl: rgb(11, 12, 23);
+    --content-text: rgb(0, 0, 0);
+}
+
+/* ========================================================== 
+                            Header
+========================================================== */
+
+body {
+    font-family: 'Roboto-Rg';
+    color: var(--content-text);
+    background-color: rgb(245, 245, 245);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h2, h3, .div__challenge p:first-of-type {
+    font-family: 'Roboto-Bd';
+}
+
+.wrapper {
+    max-width: 90rem;
+    background-color: white;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    /* background: url('./../img/ilustracion_people.png') 31.25rem -3.125rem / 58.125rem no-repeat, 
+    url('./../img/ilustracion1.png') 31.25rem 0 / 58.75rem no-repeat; */
+    background: url('./../img/ilustracion1.png') top right / contain no-repeat;
+    color: var(--header-hl);
+    padding: 40px 5rem;
+    min-height: 765px;
+    
+}
+
+.people {
+    position: absolute;
+    padding-block-end: 44%;
+    padding-block-start: 10%;
+    width: 72%;
+    top: 0%;
+    right: -2%;
+    background: url('./../img/ilustracion_people.png') center / 100% no-repeat;
+    animation-name: bounce-background;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce-background {
+    from {
+        background-position: top;
+    }
+    50% {
+        background-position: bottom;
+    }
+    to {
+        background-position: top;
+    }
+}
+.logo > a > img {
+    position: fixed;
+    top: 40px;
+    left: 45px;
+    width: 25px;
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.logo address {
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.header__article {
+    display: inline-block;
+    padding-inline: 5% 0;
+    max-width: 30.375rem;
+    margin-top: 375px;
+}
+
+.header__article h2 {
+    font-size: 3.375rem;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.header__article p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding: 30px 0;
+}
+
+.header__article p::after {
+    content: '';
+    background: url('./../img/rocket.png') right bottom / 34px no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 28px;
+}
+
+.header__article a {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: 30px;
+}
+
+/* ========================================================== 
+                            Content
+========================================================== */
+
+main {
+    padding-top: 90px;
+}
+
+.gallery {
+    background: url('./../img/images.jpg') center / cover no-repeat;
+    height: 610px;
+}
+
+/* ========================================================== 
+                        Section Idea
+========================================================== */
+
+.section__idea {
+    padding: 250px 0 0 10%;
+}
+
+.article__idea {
+    display: flex;
+    column-gap: 11%;
+    flex-wrap: wrap;
+}
+.article__idea div {
+    flex: 1 1 14rem;
+    padding-bottom: 20px;
+}
+
+.article__idea h2 {
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.article__idea .idea::after {
+    content: '';
+    background: url('./../img/idea.png') right bottom / 50px no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.article__idea p {
+    flex: 3 1 43rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 200%;
+    padding-right: 19%;
+}
+
+/* ========================================================== 
+                        Section About
+========================================================== */
+
+.section__about {
+    padding: 100px 11%;
+}
+
+.section__about h2 {
+    max-width: 47.5rem;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 120%;
+    padding-left: 5%;
+}
+
+.section__about > div {
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 64px;
+    justify-content: center;
+}
+
+.article__about {
+    flex: 1 0 18.5rem;
+}
+
+.article__about div {
+    padding: 7px 3.125rem;
+}
+
+.article__about h3 {
+    font-size: 1.17rem;
+    font-weight: 700;
+}
+
+.article__about p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 200%;
+    padding-top: 10px;;
+}
+
+.article__start div {
+    background: url('./../img/title02.svg') top left / 30px no-repeat;
+}
+
+.article__ideas div {
+    background: url('./../img/title04.svg') top left / 30px no-repeat;
+}
+
+.article__design div {
+    background: url('./../img/title01.svg') top left / 30px no-repeat;
+}
+
+.article__work div {
+    background: url('./../img/title03.svg') top left / 30px no-repeat;
+}
+
+/* ========================================================== 
+                        Section Challenge
+========================================================== */
+
+.section__challenge {
+    padding-top: 120px;
+    text-align: center;
+    padding-inline: 1.25rem;
+}
+
+.section__challenge > div {
+    max-width: 26rem;
+    margin: 0 auto;
+}
+
+.section__challenge h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.section__challenge p {
+    padding-top: 20px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+.article__challenge {
+    max-width: 72rem;
+    margin: 0 auto;
+    min-height: 405px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div__problem, .div__solution, .div__proposal, .div__work {
+    width: 26rem;
+    height: 26rem;
+}
+
+.div__problem {
+    background: url('./../img/step01.png') center / contain no-repeat;
+}
+
+.div__solution {
+    background: url('./../img/step02.png') center / contain no-repeat;
+    order: 2;
+}
+
+.div__proposal {
+    background: url('./../img/step03.png') center / contain no-repeat;
+}
+
+.div__work {
+    background: url('./../img/step04.png') center / contain no-repeat;
+    order: 2;
+}
+
+.div__challenge {
+    max-width: 36.5rem;
+    text-align: left;
+}
+
+.div__challenge.right {
+    margin-left: auto;
+}
+
+.div__challenge.left {
+    margin-right: auto;
+    order: 1;
+}
+
+.div__challenge p:first-of-type {
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: var(--numbers);
+}
+
+.div__challenge img {
+    padding-block-start: 40px;
+    padding-block-end: 32px;
+}
+
+.div__challenge > h3 {
+    font-size: 1.17rem; 
+    font-weight: 700;
+}
+
+.div__challenge p:last-of-type {
+    line-height: 200%;
+}
+
+/* ========================================================== 
+                        Footer
+========================================================== */
+
+footer {
+    padding-inline: 5%;
+    margin-top: 150px;
+}
+
+.div__footer {
+    max-width: 41rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.div__footer div {
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.div__footer h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.div__footer p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 130%;
+    padding-block-start: 20px;
+}
+
+.div__footer input {
+    text-align: center;
+    display: block;
+    margin: 50px auto 0;
+    max-width: -webkit-fill-available;
+    padding-inline: 30%;
+    padding-block: 30px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.div__footer a {
+    display: inline-block;
+    width: 15.625rem;
+    background-color: var(--accent);
+    padding: 20px 5.125rem;
+    color: white;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.div__footer a:hover {
+    background: linear-gradient(to right bottom, var(--accent) 40%, blue);
+}
+
+footer address {
+    margin-block-start: 150px;
+    padding-block-end: 50px;
+}
+
+footer address::after {
+    content: '';
+    display: inline-block;
+    background: url('./../img/love.png') center / contain no-repeat;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    padding-left: 0.9375rem;
+}
